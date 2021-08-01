@@ -20,6 +20,9 @@
   --card-set: 30px;
   --shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  --icon-backround: #f5f4fa;
+  --footer-link-color: #43444d;
+  --icon-team: #afb1b8;
 }
 html {
   box-sizing: border-box;
@@ -116,6 +119,7 @@ img {
 .contact-information .link {
   color: var(--second-text-color);
   display: block;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.1;
@@ -131,14 +135,44 @@ img {
 .contact-information .link + .link {
   margin-left: 50px;
 }
+.contact-information > .link::before {
+  display: inline-flex;
+  content: " ";
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.icon-mail::before {
+  background-image: url(../images/envelope.png);
+}
+.icon-phone::before {
+  background-image: url(../images/smartphone.png);
+}
 
 /* Hero */
 
 .hero {
   background-color: var(--dark-section);
-  text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  text-align: center;
+}
+.background {
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/background.jpg);
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
 }
 .size-box {
   max-width: 680px;
@@ -196,7 +230,28 @@ img {
   line-height: 1.14;
   letter-spacing: 0.03em;
 }
+.position::before {
+  content: "";
+  display: block;
+  margin-bottom: 30px;
+  background-color: var(--icon-backround);
+  height: 120px;
 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-attention::before {
+  background-image: url(../images/antenna\ 1.svg);
+}
+.icon-punctuality::before {
+  background-image: url(../images/clock\ 1.svg);
+}
+.icon-planed::before {
+  background-image: url(../images/Vector.svg);
+}
+.icon-technology::before {
+  background-image: url(../images/astronaut\ 1.svg);
+}
 .description {
   margin-top: 0;
   margin-bottom: 0;
@@ -247,8 +302,8 @@ img {
 }
 .work {
   margin-top: 10px;
-  margin-bottom: 0px;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 0;
 }
 .photo-box .detalis {
   display: flex;
@@ -400,4 +455,77 @@ img {
 }
 .contact-footer .contact-link:not(:last-child) {
   margin-bottom: 9px;
+}
+.footer-box {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+}
+.link-box {
+  display: flex;
+}
+.footer-link .social-link:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.social-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--footer-link-color);
+  justify-content: center;
+  align-items: center;
+}
+.link-team {
+  display: flex;
+}
+.social-link svg {
+  width: 20px;
+  height: 20px;
+}
+.social-link:hover {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+.social-box {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.social-team svg {
+  width: 20px;
+  height: 20px;
+}
+.social-team:hover svg,
+.social-team:focus svg {
+  fill: var(--white-color);
+}
+.social-team:hover {
+  background-color: var(--accent-color);
+}
+.social-team {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
