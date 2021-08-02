@@ -23,6 +23,8 @@
   --icon-background: #f5f4fa;
   --footer-link-color: #43444d;
   --icon-team: #afb1b8;
+  --border-logo-company: #afb1b8;
+  --logo-company: rgba(175, 177, 184, 1);
 }
 html {
   box-sizing: border-box;
@@ -214,6 +216,7 @@ img {
   margin: 0;
   padding: 0px;
   display: flex;
+  justify-content: center;
 }
 .inform-positions .position + .position {
   margin-left: 30px;
@@ -328,11 +331,13 @@ img {
   line-height: 1.1;
   letter-spacing: 0.03em;
 }
+
 .team-box {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
+  margin-top: 0;
 }
 .team-link {
   display: flex;
@@ -349,7 +354,7 @@ img {
   fill: var(--white-color);
 }
 .team-link:not(:last-child) {
-  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .work {
@@ -444,6 +449,65 @@ img {
 }
 .card-content {
   padding: 20px 24px;
+}
+.work-card:hover {
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+/* Client-section */
+
+.client {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.client-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+.client-logo {
+  display: flex;
+  justify-content: center;
+  fill: var(--logo-company);
+  width: 100px;
+  height: 60px;
+}
+.client-title {
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.client-logo:hover {
+  fill: var(--accent-color);
+}
+
+.client-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--border-logo-company);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.client-icons:hover {
+  border: 1px solid var(--accent-color);
+}
+.client-icons:not(:last-child) {
+  margin-right: 30px;
 }
 /* footer */
 .link-footer {
