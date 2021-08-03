@@ -325,13 +325,15 @@ img {
 .name-inform {
   margin: 0px;
 }
+.personal-info {
+  background-color: var(--white-color);
+}
 .personal-info:not(:last-child) {
   margin-right: 30px;
 }
 .photo-box .detalis {
   box-shadow: var(--footer-color);
   border-radius: 0px 0px 4px 4px;
-  background-color: var(--white-color);
 }
 
 .team-title {
