@@ -136,10 +136,6 @@ img {
   height: 16px;
   margin-right: 10px;
 }
-.icon-tel:hover,
-.icons-mail:hover {
-  fill: var(--accent-color);
-}
 
 .contact-information .link {
   display: flex;
@@ -152,8 +148,19 @@ img {
   text-decoration: none;
 }
 .contact-information .link:hover,
-.contact-information.link:focus {
+.contact-information .link:focus {
   color: var(--accent-color);
+}
+.mail-box .link:hover .icons-mail,
+.tel-box .link:hover .icon-tel {
+  fill: var(--accent-color);
+}
+
+.tel-box .link:focus .icon-tel {
+  fill: var(--accent-color);
+}
+.mail-box .link:focus .icons-mail {
+  fill: var(--accent-color);
 }
 
 /* Hero */
@@ -203,7 +210,7 @@ img {
   font-family: "roboto", sans-serif;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.1;
+  line-height: 1.8;
   letter-spacing: 0.06em;
   padding: 10px 32px;
   border-radius: 4px;
@@ -324,6 +331,7 @@ img {
 .photo-box .detalis {
   box-shadow: var(--footer-color);
   border-radius: 0px 0px 4px 4px;
+  background-color: var(--white-color);
 }
 
 .team-title {
@@ -349,10 +357,12 @@ img {
   justify-content: center;
   align-items: center;
 }
-.team-link:hover {
+.team-link:hover,
+.team-link:focus {
   background-color: var(--accent-color);
 }
-.team-link:hover svg {
+.team-link:hover svg,
+.team-link:focus svg {
   fill: var(--white-color);
 }
 .team-link:not(:last-child) {
@@ -395,6 +405,7 @@ img {
 .button-type .link {
   background-color: var(--box-button);
   color: var(--title-text-color);
+  border: none;
   font-family: "roboto", sans-serif;
   line-height: 1.62;
   font-weight: 500;
@@ -402,7 +413,6 @@ img {
   text-align: center;
   cursor: pointer;
   border-radius: 4px;
-  border-color: var(--border-color);
   padding: 6px 22px;
 }
 .button-type .link:hover,
@@ -492,10 +502,6 @@ img {
   margin-bottom: 50px;
 }
 
-.client-logo:hover {
-  fill: var(--accent-color);
-}
-
 .client-icons {
   display: flex;
   justify-content: center;
@@ -508,6 +514,15 @@ img {
 }
 .client-icons:hover {
   border: 1px solid var(--accent-color);
+}
+.client-icons:hover .client-logo {
+  fill: var(--accent-color);
+}
+.client-icons:focus-within {
+  border: 1px solid var(--accent-color);
+}
+.client-icons:focus-within .client-logo {
+  fill: var(--accent-color);
 }
 .client-icons:not(:last-child) {
   margin-right: 30px;
@@ -593,7 +608,8 @@ img {
   width: 20px;
   height: 20px;
 }
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--accent-color);
   color: var(--white-color);
 }
